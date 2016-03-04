@@ -141,6 +141,11 @@ WIFI_DRIVER_FW_PATH_STA          := "sta"
 TARGET_USES_QCOM_WCNSS_QMI       := true
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
+WLAN_MODULES:
+	ln -sf /system/lib/modules/pronto/pronto_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
+
+TARGET_KERNEL_MODULES += WLAN_MODULES
+
 # SELinux policies
 # qcom sepolicy
 include device/qcom/sepolicy/sepolicy.mk
