@@ -67,6 +67,10 @@ BLUETOOTH_HCI_USE_MCT := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
+# Force camera module to be compiled only in 32-bit mode on 64-bit systems
+# Once camera module can run in the native mode of the system (either
+# 32-bit or 64-bit), the following line should be deleted
+BOARD_QTI_CAMERA_32BIT_ONLY := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
@@ -98,6 +102,9 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
+# Peripheral manager
+TARGET_PER_MGR_ENABLED := true
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
@@ -116,6 +123,9 @@ TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
 
 # Time Service
 BOARD_USES_QC_TIME_SERVICES := true
+
+# Use dlmalloc instead of jemalloc for mallocs
+MALLOC_IMPL := dlmalloc
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
