@@ -715,6 +715,11 @@ etc/firmware/venus.mdt
 
 # OTHER FIRMWARE
 etc/firmware/wlan/prima/WCNSS_cfg.dat
+etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+etc/firmware/wcd9306/wcd9306_anc.bin
+etc/firmware/wcd9306/wcd9306_mbhc.bin
 etc/firmware/hbtp/hbtp_rohm_ql1500_np.cfg
 etc/firmware/hbtp/hbtp_rohm_ql1500_np.dat
 etc/firmware/modem_config/cmcc_mcfg_sw.mbn
