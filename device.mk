@@ -17,12 +17,11 @@
 $(call inherit-product-if-exists, vendor/xiaomi/ido/ido-vendor.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/kernel:kernel \
-    $(LOCAL_PATH)/dt.img:dt.img
+    $(LOCAL_PATH)kernel:kernel
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -37,7 +36,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Prebuilts
 PRODUCT_COPY_FILES += \
-     $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilt/system,system)
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilt/system,system)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -77,6 +76,7 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8916 \
     audio.r_submix.default \
     audio.usb.default \
+    libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -95,6 +95,7 @@ PRODUCT_PACKAGES += \
     copybit.msm8916 \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
+    liboverlay \
     libtinyxml \
     memtrack.msm8916
 
@@ -159,6 +160,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.target.rc \
     init.qcom.usb.rc \
+    init.qcom.factory.rc \
     ueventd.qcom.rc \
     init.class_main.sh \
     init.mdm.sh \
@@ -178,14 +180,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Properties to overwrite (Default)
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.restore_mode_pref=1 \
-    persist.radio.ignore_dom_time=5 \
-    persist.radio.multisim.config=dsds \
-    persist.radio.always_send_plmn=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.ts.postmakeup=true \
-    persist.ts.rtmakeup=true
+    persist.sys.isUsbOtgEnabled=true
 
 # Camera API
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -210,7 +205,9 @@ PRODUCT_PACKAGES += \
     libwpa_client
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PACKAGES += \
     wcnss_service

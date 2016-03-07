@@ -4,7 +4,6 @@
      Qualcomm Technologies Proprietary and Confidential.
 -->
 
-<?xml version="1.0" encoding="UTF-8"?>
 <list name="dsi_config">
    <!-- Configuration for fusion4.5 PCIe -->
    <listitem name="fusion4_5_pcie">
