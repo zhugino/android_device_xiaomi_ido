@@ -639,7 +639,7 @@ bin/netmgrd
 etc/permissions/cneapiclient.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
 lib/librmnetctl.so
