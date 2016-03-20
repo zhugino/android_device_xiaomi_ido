@@ -112,6 +112,10 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8916
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8916
