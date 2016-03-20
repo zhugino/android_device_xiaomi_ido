@@ -142,7 +142,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # RIL
 PROTOBUF_SUPPORTED := true
-TARGET_RIL_VARIANT := proprietary
+TARGET_RIL_VARIANT := caf
 
 # System Properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
