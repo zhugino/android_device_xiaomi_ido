@@ -21,7 +21,7 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)kernel:kernel
+    $(LOCAL_PATH)/kernel:kernel
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
