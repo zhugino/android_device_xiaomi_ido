@@ -13,6 +13,9 @@ persist.radio.rat_on=combine
 ril.subscription.types=RUIM
 DEVICE_PROVISIONED=1
 
+# Reduce log spam
+persist.data.qmi.adb_logmask=0
+
 # Start in cdma mode
 ro.telephony.default_network=22
 
