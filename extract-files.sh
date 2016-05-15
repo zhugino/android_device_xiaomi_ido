@@ -57,4 +57,4 @@ rm -rf $BASE/*
 
 extract ../../$VENDOR/$DEVICE/proprietary-files.txt $BASE
 
-bash ./setup-makefiles.sh
+./setup-makefiles.sh

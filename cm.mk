@@ -20,6 +20,3 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 PRODUCT_NAME := cm_ido
 TARGET_VENDOR := xiaomi
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="Xiaomi/ido/ido:5.1.1/LMY47V/V7.1.2.0.LHPCNCK:user/release-keys" \
-    PRIVATE_BUILD_DESC="ido-user 5.1.1 LMY47V V7.1.2.0.LHPCNCK release-keys"
